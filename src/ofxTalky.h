@@ -17,6 +17,8 @@
 #include "Poco/BasicEvent.h"
 using Poco::BasicEvent;
 
+using namespace Talky;
+
 class ofxTalky : public ofThread, public TalkyBase
 {
 public:
@@ -31,7 +33,8 @@ public:
 	bool	getIsServerBound();
 	int		getNumClients();
     
-    Poco::BasicEvent<int>   actionMsgRx;
+    Poco::BasicEvent<int>		actionMsgRx;
+	Poco::BasicEvent<int>		actionClientIsNowConnected;
 	
 protected:
     void threadedFunction();
@@ -62,6 +65,7 @@ protected:
     void txClient(char *buffer, int messageSize);
 
     void notifyReceiveEvent(int msgCount);
+	void notifyClientIsNowConnected();
     
 	ofxTCPServer	*tcpServer;
 	ofxTCPClient	*tcpClient;

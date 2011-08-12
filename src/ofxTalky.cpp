@@ -13,8 +13,7 @@
 // PUBLIC
 //
 
-ofxTalky::~ofxTalky()
-{
+ofxTalky::~ofxTalky() {
     if (nodeType==0)
         return;
     
@@ -38,8 +37,7 @@ ofxTalky::~ofxTalky()
     delete this;
 }
 
-void ofxTalky::setup(string remoteHost, int remotePort)
-{
+void ofxTalky::setup(string remoteHost, int remotePort) {
     try {
         TalkyBase::setup(remoteHost, remotePort);
     } catch (string err) {
@@ -47,8 +45,7 @@ void ofxTalky::setup(string remoteHost, int remotePort)
     }
 }
 
-void ofxTalky::setup(int localPort)
-{
+void ofxTalky::setup(int localPort) {
     try {
         TalkyBase::setup(localPort);
     } catch (string err) {
@@ -56,8 +53,7 @@ void ofxTalky::setup(int localPort)
     }
 }
 
-bool ofxTalky::getIsServerBound()
-{
+bool ofxTalky::getIsServerBound() {
     try {
         return TalkyBase::getIsServerBound();
     } catch (string err) {
@@ -66,8 +62,7 @@ bool ofxTalky::getIsServerBound()
     }
 }
 
-int ofxTalky::getNumClients()
-{
+int ofxTalky::getNumClients() {
     try {
         return TalkyBase::getNumClients();
     } catch (string err) {
@@ -80,13 +75,11 @@ int ofxTalky::getNumClients()
 // PROTECTED
 //
 
-void ofxTalky::beginThread()
-{
+void ofxTalky::beginThread() {
     startThread(true, false);
 }
 
-void ofxTalky::threadedFunction()
-{
+void ofxTalky::threadedFunction() {
 	//this is essentially our update loop
 	while (isThreadRunning()) {
         
@@ -100,94 +93,83 @@ void ofxTalky::threadedFunction()
             cout << "ofxTalky: " << e << "\n";
         }
 	}
+	
+	ofLog(OF_LOG_WARNING, "ofxTalky : thread closed");
 }
 
-bool ofxTalky::lockThread()
-{
+bool ofxTalky::lockThread() {
     return lock();
 }
 
-void ofxTalky::unlockThread()
-{
+void ofxTalky::unlockThread() {
     unlock();
 }
 
-bool ofxTalky::lockServer()
-{
+bool ofxTalky::lockServer() {
     return tcpServer->lock();
 }
 
-void ofxTalky::unlockServer()
-{
+void ofxTalky::unlockServer() {
     tcpServer->unlock();
 }
 
-void ofxTalky::initClient()
-{
+void ofxTalky::initClient() {
     tcpClient = new ofxTCPClient();
 	tcpClient->setVerbose(true);
 }
 
-void ofxTalky::initServer()
-{
+void ofxTalky::initServer() {
     tcpServer = new ofxTCPServer();
 	tcpServer->setVerbose(true);
 }
 
-void ofxTalky::startClient()
-{
+void ofxTalky::startClient() {
 	isConnected = tcpClient->setup(_remoteHost, _remotePort, false);
 }
 
-void ofxTalky::startServer()
-{
+void ofxTalky::startServer() {
     tcpServer = new ofxTCPServer();
 	tcpServer->setVerbose(true);
 	isServerBound = tcpServer->setup(_localPort, false);
 }
 
-bool ofxTalky::isClientConnected()
-{
+bool ofxTalky::isClientConnected() {
     return tcpClient->isConnected();
 }
 
-bool ofxTalky::isServerConnected()
-{
+bool ofxTalky::isServerConnected() {
     return tcpServer->isConnected();
 }
 
-bool ofxTalky::isServersClientConnected(int iClient)
-{
+bool ofxTalky::isServersClientConnected(int iClient) {
     return tcpServer->isClientConnected(iClient);
 }
 
-int ofxTalky::getNumServerClients()
-{
+int ofxTalky::getNumServerClients() {
     return tcpServer->getNumClients();
 }
 
-int ofxTalky::rxServer(int iClient, char *buffer, int bufferSize)
-{
+int ofxTalky::rxServer(int iClient, char *buffer, int bufferSize) {
     return tcpServer->receiveRawBytes(iClient, buffer, bufferSize);
 }
 
-int ofxTalky::rxClient(char *buffer, int bufferSize)
-{
+int ofxTalky::rxClient(char *buffer, int bufferSize) {
     return tcpClient->receiveRawBytes(buffer, bufferSize);    
 }
 
-void ofxTalky::txServer(int iClient, char *buffer, int messageSize)
-{
+void ofxTalky::txServer(int iClient, char *buffer, int messageSize) {
     tcpServer->sendRawBytes(iClient, buffer, messageSize);
 }
 
-void ofxTalky::txClient(char *buffer, int messageSize)
-{
+void ofxTalky::txClient(char *buffer, int messageSize) {
     tcpClient->sendRawBytes(buffer, messageSize);
 }
 
-void ofxTalky::notifyReceiveEvent(int msgCount)
-{
-    int count = receiveQueue.size();
-    actionMsgRx.notify(this, count);
+void ofxTalky::notifyReceiveEvent(int msgCount) {
+    actionMsgRx.notify(this, msgCount);
+}
+
+void ofxTalky::notifyClientIsNowConnected() {
+	int msg = 0;
+	actionClientIsNowConnected.notify(this, msg);
 }
