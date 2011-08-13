@@ -14,7 +14,6 @@
 		8B11163013F52A14007A3C46 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B11162F13F52A14007A3C46 /* libfmodex.dylib */; };
 		8B4029D913F5237700A8621C /* TalkyBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B40298213F5237700A8621C /* TalkyBase.cpp */; };
 		8B4029DA13F5237700A8621C /* TalkyBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B40298413F5237700A8621C /* TalkyBuffer.cpp */; };
-		8B4029DB13F5237700A8621C /* TalkyBundleMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B40298613F5237700A8621C /* TalkyBundleMessage.cpp */; };
 		8B4029DC13F5237700A8621C /* TalkyMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B40298813F5237700A8621C /* TalkyMessage.cpp */; };
 		8B4029F613F5237700A8621C /* ofxTalky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B4029D713F5237700A8621C /* ofxTalky.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
@@ -67,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8B0D1EDC13F5A84B00B8A963 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		8B11161913F528A6007A3C46 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
 		8B11161A13F528A6007A3C46 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		8B11161C13F528A6007A3C46 /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
@@ -85,8 +85,6 @@
 		8B40298313F5237700A8621C /* TalkyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBase.h; sourceTree = "<group>"; };
 		8B40298413F5237700A8621C /* TalkyBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyBuffer.cpp; sourceTree = "<group>"; };
 		8B40298513F5237700A8621C /* TalkyBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBuffer.h; sourceTree = "<group>"; };
-		8B40298613F5237700A8621C /* TalkyBundleMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyBundleMessage.cpp; sourceTree = "<group>"; };
-		8B40298713F5237700A8621C /* TalkyBundleMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBundleMessage.h; sourceTree = "<group>"; };
 		8B40298813F5237700A8621C /* TalkyMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyMessage.cpp; sourceTree = "<group>"; };
 		8B40298913F5237700A8621C /* TalkyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyMessage.h; sourceTree = "<group>"; };
 		8B4029D713F5237700A8621C /* ofxTalky.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTalky.cpp; sourceTree = "<group>"; };
@@ -224,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8B40298113F5237700A8621C /* src */,
+				8B0D1EDC13F5A84B00B8A963 /* readme.txt */,
 			);
 			path = Talky;
 			sourceTree = "<group>";
@@ -235,8 +234,6 @@
 				8B40298313F5237700A8621C /* TalkyBase.h */,
 				8B40298413F5237700A8621C /* TalkyBuffer.cpp */,
 				8B40298513F5237700A8621C /* TalkyBuffer.h */,
-				8B40298613F5237700A8621C /* TalkyBundleMessage.cpp */,
-				8B40298713F5237700A8621C /* TalkyBundleMessage.h */,
 				8B40298813F5237700A8621C /* TalkyMessage.cpp */,
 				8B40298913F5237700A8621C /* TalkyMessage.h */,
 			);
@@ -435,7 +432,6 @@
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				8B4029D913F5237700A8621C /* TalkyBase.cpp in Sources */,
 				8B4029DA13F5237700A8621C /* TalkyBuffer.cpp in Sources */,
-				8B4029DB13F5237700A8621C /* TalkyBundleMessage.cpp in Sources */,
 				8B4029DC13F5237700A8621C /* TalkyMessage.cpp in Sources */,
 				8B4029F613F5237700A8621C /* ofxTalky.cpp in Sources */,
 				8B11162613F528A6007A3C46 /* ofxTCPClient.cpp in Sources */,

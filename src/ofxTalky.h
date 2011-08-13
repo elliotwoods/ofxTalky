@@ -57,15 +57,24 @@ protected:
     bool isServersClientConnected(int iClient);
 	
     int getNumServerClients();
-    
+	
     int rxServer(int iClient, char *buffer, int bufferSize);
     int rxClient(char *buffer, int bufferSize);
-    
+	
     void txServer(int iClient, char *buffer, int messageSize);
     void txClient(char *buffer, int messageSize);
 
     void notifyReceiveEvent(int msgCount);
 	void notifyClientIsNowConnected();
+	
+	void throwWarning(string s);
+	void throwError(string s);
+	
+	/** In openFrameworks' ofxNetwork,
+	 network errors arrive as negative
+	 byte counts. We process them here.
+	 */
+	void processRxErrors(int& n);
     
 	ofxTCPServer	*tcpServer;
 	ofxTCPClient	*tcpClient;

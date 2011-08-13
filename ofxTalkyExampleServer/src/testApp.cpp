@@ -8,6 +8,8 @@ void testApp::setup(){
 	ofSetWindowShape(400, 700);
 	ofBackground(200, 50, 50);
 	ofSetVerticalSync(true);
+	
+	msgHeader = TalkyMessageHeader("KC", "mo", 1, 1);
 }
 
 //--------------------------------------------------------------
@@ -18,7 +20,7 @@ void testApp::update(){
 	status += (talkyServer.getIsServerBound() ? "true" : "false");
 	status += "\nClients connected: " + ofToString(talkyServer.getNumClients());
 	status += "\n";
-	status += "receiveQueue count: " + ofToString(talkyServer.receiveQueue.size(), 0) + "\n";
+	status += "receiveQueue count: " + ofToString(talkyServer.getReceiveQueue().size(), 0) + "\n";
 	status += "sendQueue count: " + ofToString(talkyServer.getSendQueue().size(), 0) + "\n";
 	
 	
@@ -70,11 +72,9 @@ void testApp::mouseMoved(int x, int y ){
 	ofPoint point = ofPoint(x,y);
 	
 	TalkyMessage msg;
-	msg.setCompany("KC");
-	msg.setProtocol("mo");
-	msg.setPayload((char *) &point, sizeof(ofPoint));
-	msg.Version = 1;
-	msg.ContentsType = 1;
+	
+	msg.setHeader(msgHeader);
+	msg << point;
 	
 	talkyServer.send(msg);
 	

@@ -23,10 +23,10 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
 
-	ofxTalky		talkyServer;
-	vector<ofPoint>	line;
-	
-	string			status;
+	ofxTalky			talkyServer;
+	vector<ofPoint>		line;
+	TalkyMessageHeader	msgHeader;
+	string				status;
 };
 
 #endif

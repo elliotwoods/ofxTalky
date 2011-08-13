@@ -9,12 +9,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334847322.909079"
+         timestampString = "334944300.865491"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
-         landmarkName = "ofxTalky::lockThread()"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
+         landmarkName = "ofxTalky::rxServer(int iClient, char *buffer, int bufferSize)"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -23,39 +23,41 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334847413.123178"
+         timestampString = "334944303.321199"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
-         landmarkName = "ofxTalky::lockServer()"
+         startingLineNumber = "163"
+         endingLineNumber = "163"
+         landmarkName = "ofxTalky::rxClient(char *buffer, int bufferSize)"
          landmarkType = "5">
-         <Locations>
-            <Location
-               shouldBeEnabled = "Yes"
-               ignoreCount = "0"
-               continueAfterRunningActions = "No"
-               symbolName = "std::auto_ptr&lt;Poco::AbstractDelegate&lt;int&gt; &gt;::auto_ptr(Poco::AbstractDelegate&lt;int&gt;*)"
-               urlString = "file://localhost/ofxTalky.cpp"
-               timestampString = "334847852.297309"
-               startingColumnNumber = "9223372036854775807"
-               endingColumnNumber = "9223372036854775807"
-               startingLineNumber = "109"
-               endingLineNumber = "109">
-            </Location>
-            <Location
-               shouldBeEnabled = "Yes"
-               ignoreCount = "0"
-               continueAfterRunningActions = "No"
-               symbolName = "ofxTalky::lockServer()"
-               urlString = "file://localhost/ofxTalky.cpp"
-               timestampString = "334847852.29791"
-               startingColumnNumber = "9223372036854775807"
-               endingColumnNumber = "9223372036854775807"
-               startingLineNumber = "109"
-               endingLineNumber = "109">
-            </Location>
-         </Locations>
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
+         timestampString = "334944308.041428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
+         landmarkName = "ofxTalky::txServer(int iClient, char *buffer, int messageSize)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
+         timestampString = "334944310.065372"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "187"
+         endingLineNumber = "187"
+         landmarkName = "ofxTalky::txClient(char *buffer, int messageSize)"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
    <ExceptionBreakpoints>

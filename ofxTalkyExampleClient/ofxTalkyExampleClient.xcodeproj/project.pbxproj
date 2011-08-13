@@ -14,7 +14,6 @@
 		8B11164913F52A69007A3C46 /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B11164113F52A69007A3C46 /* ofxUDPManager.cpp */; };
 		8B402AE813F5238900A8621C /* TalkyBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B402A9113F5238900A8621C /* TalkyBase.cpp */; };
 		8B402AE913F5238900A8621C /* TalkyBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B402A9313F5238900A8621C /* TalkyBuffer.cpp */; };
-		8B402AEA13F5238900A8621C /* TalkyBundleMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B402A9513F5238900A8621C /* TalkyBundleMessage.cpp */; };
 		8B402AEB13F5238900A8621C /* TalkyMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B402A9713F5238900A8621C /* TalkyMessage.cpp */; };
 		8B402B0513F5238900A8621C /* ofxTalky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B402AE613F5238900A8621C /* ofxTalky.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
@@ -85,8 +84,6 @@
 		8B402A9213F5238900A8621C /* TalkyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBase.h; sourceTree = "<group>"; };
 		8B402A9313F5238900A8621C /* TalkyBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyBuffer.cpp; sourceTree = "<group>"; };
 		8B402A9413F5238900A8621C /* TalkyBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBuffer.h; sourceTree = "<group>"; };
-		8B402A9513F5238900A8621C /* TalkyBundleMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyBundleMessage.cpp; sourceTree = "<group>"; };
-		8B402A9613F5238900A8621C /* TalkyBundleMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyBundleMessage.h; sourceTree = "<group>"; };
 		8B402A9713F5238900A8621C /* TalkyMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TalkyMessage.cpp; sourceTree = "<group>"; };
 		8B402A9813F5238900A8621C /* TalkyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkyMessage.h; sourceTree = "<group>"; };
 		8B402AE613F5238900A8621C /* ofxTalky.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTalky.cpp; sourceTree = "<group>"; };
@@ -235,8 +232,6 @@
 				8B402A9213F5238900A8621C /* TalkyBase.h */,
 				8B402A9313F5238900A8621C /* TalkyBuffer.cpp */,
 				8B402A9413F5238900A8621C /* TalkyBuffer.h */,
-				8B402A9513F5238900A8621C /* TalkyBundleMessage.cpp */,
-				8B402A9613F5238900A8621C /* TalkyBundleMessage.h */,
 				8B402A9713F5238900A8621C /* TalkyMessage.cpp */,
 				8B402A9813F5238900A8621C /* TalkyMessage.h */,
 			);
@@ -435,7 +430,6 @@
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				8B402AE813F5238900A8621C /* TalkyBase.cpp in Sources */,
 				8B402AE913F5238900A8621C /* TalkyBuffer.cpp in Sources */,
-				8B402AEA13F5238900A8621C /* TalkyBundleMessage.cpp in Sources */,
 				8B402AEB13F5238900A8621C /* TalkyMessage.cpp in Sources */,
 				8B402B0513F5238900A8621C /* ofxTalky.cpp in Sources */,
 				8B11164613F52A69007A3C46 /* ofxTCPClient.cpp in Sources */,

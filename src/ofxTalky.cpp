@@ -150,11 +150,33 @@ int ofxTalky::getNumServerClients() {
 }
 
 int ofxTalky::rxServer(int iClient, char *buffer, int bufferSize) {
-    return tcpServer->receiveRawBytes(iClient, buffer, bufferSize);
+	int nBytesReceived = tcpServer->receiveRawBytes(iClient, buffer, bufferSize);
+	
+	processRxErrors(nBytesReceived);
+	return nBytesReceived;
 }
 
 int ofxTalky::rxClient(char *buffer, int bufferSize) {
-    return tcpClient->receiveRawBytes(buffer, bufferSize);    
+	int nBytesReceived = tcpClient->receiveRawBytes(buffer, bufferSize);
+	
+	processRxErrors(nBytesReceived);
+    return nBytesReceived;
+}
+
+void ofxTalky::processRxErrors(int& n) {
+	//negative values in ofxNetwork signify error codes
+	if (n < 0)
+	{
+		switch (n)
+		{
+			case SOCKET_TIMEOUT:
+				ofLogWarning() << "Socket timeout";
+				break;
+			case SOCKET_ERROR:
+				ofLogWarning() << "Socker error";
+		}
+		n = 0;
+	}
 }
 
 void ofxTalky::txServer(int iClient, char *buffer, int messageSize) {
@@ -172,4 +194,12 @@ void ofxTalky::notifyReceiveEvent(int msgCount) {
 void ofxTalky::notifyClientIsNowConnected() {
 	int msg = 0;
 	actionClientIsNowConnected.notify(this, msg);
+}
+
+void ofxTalky::throwWarning(string s) {
+	ofLogWarning() << s;
+}
+
+void ofxTalky::throwError(string s) {
+	ofLogError() << s;
 }
