@@ -24,8 +24,9 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 
 	ofxTalky			talkyServer;
-	vector<ofPoint>		line;
 	TalkyMessageHeader	msgHeader;
+	
+	vector<ofPoint>		line;
 	string				status;
 };
 

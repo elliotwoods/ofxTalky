@@ -167,14 +167,16 @@ void ofxTalky::processRxErrors(int& n) {
 	//negative values in ofxNetwork signify error codes
 	if (n < 0)
 	{
+		/*
 		switch (n)
 		{
 			case SOCKET_TIMEOUT:
 				ofLogWarning() << "Socket timeout";
 				break;
 			case SOCKET_ERROR:
-				ofLogWarning() << "Socker error";
+				ofLogWarning() << "Socket error";
 		}
+		 */
 		n = 0;
 	}
 }

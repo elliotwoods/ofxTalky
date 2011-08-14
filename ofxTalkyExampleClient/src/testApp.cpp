@@ -3,11 +3,12 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
-	talkyClient.setup("127.0.0.1", 5000);
+	talkyClient.setup("127.0.0.1");
 
 	ofSetWindowShape(400, 700);
 	ofBackground(50, 200, 50);
 	ofSetVerticalSync(true);
+	ofSetFrameRate(60);
 	
 	msgHeader = TalkyMessageHeader("KC", "mo", 1, 1);
 }
@@ -41,6 +42,11 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
+	ofDrawBitmapString(status, 10, 30);
+	
+	if (line.size() == 0)
+		return;
+	
 	ofEnableSmoothing();
 	
 	ofNoFill();
@@ -52,8 +58,7 @@ void testApp::draw(){
 	
 	ofEndShape(false);
 	
-	ofDrawBitmapString(status, 10, 30);
-		
+	ofCircle(line.back().x, line.back().y, 10);
 }
 
 //--------------------------------------------------------------

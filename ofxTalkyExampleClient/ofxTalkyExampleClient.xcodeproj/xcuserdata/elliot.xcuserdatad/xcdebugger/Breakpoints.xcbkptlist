@@ -8,55 +8,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "0"
-         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334944300.865491"
+         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/libs/Talky/src/TalkyBase.cpp"
+         timestampString = "334960557.786802"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
-         landmarkName = "ofxTalky::rxServer(int iClient, char *buffer, int bufferSize)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334944303.321199"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "163"
-         endingLineNumber = "163"
-         landmarkName = "ofxTalky::rxClient(char *buffer, int bufferSize)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334944308.041428"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "183"
-         endingLineNumber = "183"
-         landmarkName = "ofxTalky::txServer(int iClient, char *buffer, int messageSize)"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/elliot/dev/openFrameworks/openFrameworks/addons/ofxTalky/src/ofxTalky.cpp"
-         timestampString = "334944310.065372"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "187"
-         endingLineNumber = "187"
-         landmarkName = "ofxTalky::txClient(char *buffer, int messageSize)"
+         startingLineNumber = "267"
+         endingLineNumber = "267"
+         landmarkName = "TalkyBase::update()"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
