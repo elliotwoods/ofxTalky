@@ -25,10 +25,10 @@ public:
 	~ofxTalky();
     
     //setup as client
-	void setup(string remoteHost, int remotePort);
+	void setup(string remoteHost, int remotePort=TALKY_DEFAULT_PORT);
 	
 	//setup as server
-	void setup(int localPort);
+	void setup(int localPort=TALKY_DEFAULT_PORT);
 	
 	bool	getIsServerBound();
 	int		getNumClients();
