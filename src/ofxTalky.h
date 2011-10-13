@@ -24,11 +24,15 @@ class ofxTalky : public ofThread, public TalkyBase
 public:
 	~ofxTalky();
     
-    //setup as client
-	void setup(string remoteHost, int remotePort=TALKY_DEFAULT_PORT);
+    ///setup as client
+	void init(string remoteHost, int remotePort=TALKY_DEFAULT_PORT);
 	
-	//setup as server
-	void setup(int localPort=TALKY_DEFAULT_PORT);
+	///setup as server
+	void init(int localPort=TALKY_DEFAULT_PORT);
+	
+	///We keep the old syntax for backwards compatability
+	void setup(int localPort=TALKY_DEFAULT_PORT) { init(localPort); };
+	void setup(string remoteHost, int remotePort=TALKY_DEFAULT_PORT) {init(remoteHost, remotePort); };
 	
 	bool	getIsServerBound();
 	int		getNumClients();

@@ -37,7 +37,7 @@ ofxTalky::~ofxTalky() {
     delete this;
 }
 
-void ofxTalky::setup(string remoteHost, int remotePort) {
+void ofxTalky::init(string remoteHost, int remotePort) {
     try {
         TalkyBase::setup(remoteHost, remotePort);
     } catch (string err) {
@@ -45,7 +45,7 @@ void ofxTalky::setup(string remoteHost, int remotePort) {
     }
 }
 
-void ofxTalky::setup(int localPort) {
+void ofxTalky::init(int localPort) {
     try {
         TalkyBase::setup(localPort);
     } catch (string err) {
