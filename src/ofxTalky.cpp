@@ -83,7 +83,7 @@ void ofxTalky::threadedFunction() {
 	//this is essentially our update loop
 	while (isThreadRunning()) {
         
-		ofSleepMillis(TALKY_SLEEP_TIME);
+		ofSleepMillis(TALKY_SLEEP_TIME_MILLIS);
         
 		try {
             update();
