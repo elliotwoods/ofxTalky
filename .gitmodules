@@ -1,0 +1,3 @@
+[submodule "libs/Talky"]
+	path = libs/Talky
+	url = git@github.com:elliotwoods/Talky.git
